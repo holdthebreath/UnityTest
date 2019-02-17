@@ -17,13 +17,18 @@ public class LogInController {
 
     @RequestMapping("/index")
     public String index(){
-        return "/Test/index";
+        return "/index";
+    }
+
+    @RequestMapping("/unity")
+    public String unity(){
+        return "/Test/unity";
     }
 
     @CrossOrigin
     @RequestMapping("/login")
     @ResponseBody
-    public String logIn() throws Exception{
+    public String logIn(){
         HttpServletRequest request = ((ServletRequestAttributes) (RequestContextHolder.currentRequestAttributes())).getRequest();
         System.out.println(request.getParameter("UserName"));
         ReturnData returnData = new ReturnData();
