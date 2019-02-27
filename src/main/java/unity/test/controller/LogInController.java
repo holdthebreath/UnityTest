@@ -16,19 +16,34 @@ import javax.servlet.http.HttpServletRequest;
 public class LogInController {
 
     @RequestMapping("/index")
-    public String index(){
+    public String index() {
         return "/index";
     }
 
     @RequestMapping("/unity")
-    public String unity(){
+    public String unity() {
         return "/Test/unity";
+    }
+
+    @CrossOrigin
+    @RequestMapping("/playerMove")
+    @ResponseBody
+    public String playerMove() {
+        HttpServletRequest request = ((ServletRequestAttributes) (RequestContextHolder.currentRequestAttributes())).getRequest();
+        System.out.println(request.getParameter("SubmitTimes"));
+        ReturnData returnData = new ReturnData();
+        returnData.setX(Float.parseFloat(Math.random() + ""));
+        returnData.setZ(Float.parseFloat(Math.random() + ""));
+        returnData.setDown(Float.parseFloat(Math.random() + ""));
+        returnData.setUp(Float.parseFloat(Math.random() + ""));
+        Gson gson = new Gson();
+        return gson.toJson(returnData);
     }
 
     @CrossOrigin
     @RequestMapping("/login")
     @ResponseBody
-    public String logIn(){
+    public String logIn() {
         HttpServletRequest request = ((ServletRequestAttributes) (RequestContextHolder.currentRequestAttributes())).getRequest();
         System.out.println(request.getParameter("UserName"));
         ReturnData returnData = new ReturnData();

@@ -1,7 +1,7 @@
 package unity.test.pojo;
 
 public class ReturnData {
-    private float x, y, down, up;
+    private float x, z, down, up;
     private String data;
 
 
@@ -13,12 +13,12 @@ public class ReturnData {
         this.x = x;
     }
 
-    public float getY() {
-        return y;
+    public float getZ() {
+        return z;
     }
 
-    public void setY(float y) {
-        this.y = y;
+    public void setZ(float z) {
+        this.z = z;
     }
 
     public float getDown() {
