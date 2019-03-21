@@ -1,2 +1,3 @@
 # UnityTest
-A simple demo using springmvc and unity (webgl).
+A simple demo using SpringMVC and Unity (WebGL).
+		
