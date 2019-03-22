@@ -29,8 +29,8 @@
         </mvc:message-converters>
     </mvc:annotation-driven>
 
-    <mvc:resources location="/UnityFile/Build/" mapping="/Build/**"/>
-    <mvc:resources location="/UnityFile/TemplateData/" mapping="/TemplateData/**"/>
+    <mvc:resources location="/UnityFile/Build/" mapping="login/Build/**"/>
+    <mvc:resources location="/UnityFile/TemplateData/" mapping="login/TemplateData/**"/>
     <!--<mvc:default-servlet-handler/>-->
 
 </beans>

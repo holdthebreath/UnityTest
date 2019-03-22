@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 
 
 @Controller
+@RequestMapping("/login")
 public class LogInController {
 
     @Autowired
